@@ -9,7 +9,7 @@
 
 ![](./static/LongTouch/LongTouchPreview.gif)
 
-*ps:效果图来源于项目自带测试场景 [LongTouchTestScene.fire](./assets/LongTouchComponent/Scene/LongTouchTestScene.fire)，可以[下载项目](https://github.com/zhitaocai/CocosCreatorExpandComponent)下来直接运行预览，下载命令 ` git clone git@github.com:zhitaocai/CocosCreatorExpandComponent.git`*
+*ps: 效果图来源于项目自带测试场景 [LongTouchTestScene.fire](./assets/LongTouchComponent/Scene/LongTouchTestScene.fire)，可以[下载项目](https://github.com/zhitaocai/CocosCreatorExpandComponent)下来直接运行预览或执行快速下载命令 ` git clone git@github.com:zhitaocai/CocosCreatorExpandComponent.git`*
 
 ### 支持说明
 
