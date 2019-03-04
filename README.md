@@ -1,6 +1,6 @@
 # Cocos Creator 扩展组件项目
 
-[![](https://img.shields.io/badge/Release-v0.1.0-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.2.0-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/LICENSE)
 [![](https://img.shields.io/badge/Cocos%20Creator-v2.0.8-orange.svg)](http://www.cocos.com/creator)
 
@@ -46,10 +46,46 @@
 | Enable Multi Touching | 是否支持多点触控（当前还不支持）                                               |
 | Long Touch Events     | 回调事件数组，每间隔 ``Touche Interval`` 秒回调一次                               |
 
+### **权重递增实现**
+
+实际开发过程中，我们可能需要实现 **随着用户长按按钮时间越长，递增的数量要越来越多** ，我们暂且叫这种为 **权重递增** 方式。 文字描述可能比较抽象，实际效果如下：
+
+![](./static/LongTouch/LongTouchWithWeightPreview.gif)
+
+1. 可以看到，点击1次，累计递增1次
+2. 长按越久，累计递增的次数会越来越快（多）
+
+实现以上方式，只需要利用回调函数中的 `长按触摸次数参数` 进行处理即可，具体代码如下：
+
+```
+/**
+ * 累计计数
+ */
+private counter = 0;
+
+/**
+ * 处理长按逻辑
+ *
+ * @param touchCounter 本次长按触摸次数
+ * @param customEventData 在属性检查器中传入进来的 CustomEventData
+ */
+handleMiddleBtnTouchLogic(touchCounter: number, customEventData?: any) {
+    // 这里演示效果为：
+    //  如果长按回调次数小于等于3次的，那么 累计次数 = 累计次数 + 1
+    //  如果长按回调次数大于3次的，那么 累计次数 = 累计次数 + 权重公式后的结果
+    if (touchCounter <= 3) {
+        this.counter++;
+    } else {
+        // PS: 实际使用，开发者需要根据自己的期望权重递增公司来编写，这里仅为演示
+        this.counter += Math.ceil((touchCounter - 3) * 1.003);
+    }
+    this.middleLongTouchCallBackLabel.string = `累计计数 ${this.counter} 次`;
+}
+```
+
 ### TODO
 
 * [ ] 支持多点触控长按（即多根手指长按按钮时，每根手指都回调）
-
 
 ## 支持作者
 
