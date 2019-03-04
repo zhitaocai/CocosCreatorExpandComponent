@@ -1,6 +1,6 @@
 # Cocos Creator 扩展组件项目
 
-[![](https://img.shields.io/badge/Release-v0.1.0-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.2.0-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/LICENSE)
 [![](https://img.shields.io/badge/Cocos%20Creator-v2.0.8-orange.svg)](http://www.cocos.com/creator)
 
@@ -46,12 +46,7 @@
 | Enable Multi Touching | 是否支持多点触控（当前还不支持）                                               |
 | Long Touch Events     | 回调事件数组，每间隔 ``Touche Interval`` 秒回调一次                               |
 
-### TODO
-
-* [ ] 支持多点触控长按（即多根手指长按按钮时，每根手指都回调）
-
-
-### 权重递增实现
+### **权重递增实现**
 
 实际开发过程中，我们可能需要实现 **随着用户长按按钮时间越长，递增的数量要越来越多** ，我们暂且叫这种为 **权重递增** 方式。 文字描述可能比较抽象，实际效果如下：
 
@@ -88,6 +83,9 @@ handleMiddleBtnTouchLogic(touchCounter: number, customEventData?: any) {
 }
 ```
 
+### TODO
+
+* [ ] 支持多点触控长按（即多根手指长按按钮时，每根手指都回调）
 
 ## 支持作者
 
