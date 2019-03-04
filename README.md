@@ -1,6 +1,6 @@
 # Cocos Creator 扩展组件项目
 
-[![](https://img.shields.io/badge/Release-0.2.0-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
+[![](https://img.shields.io/badge/Release-0.2.1-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/CHANGELOG.md)
 [![](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/zhitaocai/CocosCreatorExpandComponent/blob/master/LICENSE)
 [![](https://img.shields.io/badge/Cocos%20Creator-v2.0.8-orange.svg)](http://www.cocos.com/creator)
 
